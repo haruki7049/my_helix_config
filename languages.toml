@@ -5,3 +5,7 @@ auto-format = true
 [[language]]
 name = "zig"
 auto-format = true
+
+[[language]]
+name = "perl"
+auto-format = true
