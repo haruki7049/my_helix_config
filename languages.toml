@@ -1,3 +1,7 @@
 [[language]]
 name = "rust"
 auto-format = true
+
+[[language]]
+name = "zig"
+auto-format = true
