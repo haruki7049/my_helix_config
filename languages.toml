@@ -9,3 +9,7 @@ auto-format = true
 [[language]]
 name = "perl"
 auto-format = true
+
+[[language]]
+name = "nix"
+auto-format = true
