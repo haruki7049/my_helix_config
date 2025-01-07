@@ -20,20 +20,22 @@
         inputs.treefmt-nix.flakeModule
       ];
 
-      perSystem = { pkgs, ... }: {
-        treefmt = {
-          projectRootFile = "flake.nix";
-          programs.nixpkgs-fmt.enable = true;
-          programs.taplo.enable = true;
-          programs.actionlint.enable = true;
-        };
+      perSystem =
+        { pkgs, ... }:
+        {
+          treefmt = {
+            projectRootFile = "flake.nix";
+            programs.nixfmt.enable = true;
+            programs.taplo.enable = true;
+            programs.actionlint.enable = true;
+          };
 
-        devShells.default = pkgs.mkShell {
-          packages = [
-            pkgs.nil
-            pkgs.nixpkgs-fmt
-          ];
+          devShells.default = pkgs.mkShell {
+            packages = [
+              pkgs.nil
+              pkgs.nixfmt-rfc-style
+            ];
+          };
         };
-      };
     };
 }
